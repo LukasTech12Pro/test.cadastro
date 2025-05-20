@@ -1,2 +1,4 @@
 com/senac/cadastro/PessoaTests.class
 com/senac/cadastro/CadastroApplicationTests.class
+com/senac/cadastro/controller/PessoaControllerTests.class
+com/senac/cadastro/controller/PessoaControllerMockTests.class

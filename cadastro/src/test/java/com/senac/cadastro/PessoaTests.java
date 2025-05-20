@@ -9,6 +9,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+
+import com.senac.cadastro.model.Pessoa;
+import com.senac.cadastro.service.PessoaService;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
@@ -17,10 +21,14 @@ import jakarta.validation.ValidatorFactory;
 
 
 @SpringBootTest
+@ActiveProfiles("test")
 public class PessoaTests {
 
     @Autowired
     private Validator validator;
+
+    @Autowired
+    private PessoaService pessoaService;
 
     @BeforeEach
     public void setup() {
@@ -31,7 +39,7 @@ public class PessoaTests {
     @Test
     public void testInserirNomeNaoPodeSerEmBrancoOuNulo() {
         Pessoa pessoa = new Pessoa();
-        pessoa.setNome("");  // Nome em branco
+        pessoa.setNome("Italo");  // Nome em branco
         pessoa.setEndereco("Rua X");
         pessoa.setEmail("teste@algumemail.com");
         pessoa.setTelefone("11 99999-8888");
@@ -101,6 +109,13 @@ public class PessoaTests {
         Set<ConstraintViolation<Pessoa>> violations = validator.validate(pessoa);
         assertFalse(violations.isEmpty(), "Deve haver erro de validação para data futura");
         assertTrue(violations.stream().anyMatch(v -> v.getMessage().contains("Data de nascimento deve ser uma data no passado")));
+    }
+
+    @Test 
+    public void ListarPessoasPorLetra()  {
+        var pessoas = pessoaService.listarPessoasPelaLetra("A");
+
+        assertTrue(pessoas.size() > 1, "A quantidade de pessoas que começe pela letra 'A' deve ser maior do que 2");
     }
 
 }

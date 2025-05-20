@@ -1,5 +1,5 @@
 /mnt/c/Users/Lucas51812876/Documents/cadastro/cadastro/src/main/java/com/senac/cadastro/CadastroApplication.java
-/mnt/c/Users/Lucas51812876/Documents/cadastro/cadastro/src/main/java/com/senac/cadastro/Pessoa.java
-/mnt/c/Users/Lucas51812876/Documents/cadastro/cadastro/src/main/java/com/senac/cadastro/PessoaController.java
-/mnt/c/Users/Lucas51812876/Documents/cadastro/cadastro/src/main/java/com/senac/cadastro/PessoaRepository.java
-/mnt/c/Users/Lucas51812876/Documents/cadastro/cadastro/src/main/java/com/senac/cadastro/PessoaService.java
+/mnt/c/Users/Lucas51812876/Documents/cadastro/cadastro/src/main/java/com/senac/cadastro/controller/PessoaController.java
+/mnt/c/Users/Lucas51812876/Documents/cadastro/cadastro/src/main/java/com/senac/cadastro/model/Pessoa.java
+/mnt/c/Users/Lucas51812876/Documents/cadastro/cadastro/src/main/java/com/senac/cadastro/repository/PessoaRepository.java
+/mnt/c/Users/Lucas51812876/Documents/cadastro/cadastro/src/main/java/com/senac/cadastro/service/PessoaService.java
