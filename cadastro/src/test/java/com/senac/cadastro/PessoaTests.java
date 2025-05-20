@@ -39,7 +39,7 @@ public class PessoaTests {
     @Test
     public void testInserirNomeNaoPodeSerEmBrancoOuNulo() {
         Pessoa pessoa = new Pessoa();
-        pessoa.setNome("Italo");  // Nome em branco
+        pessoa.setNome("");  // Nome em branco
         pessoa.setEndereco("Rua X");
         pessoa.setEmail("teste@algumemail.com");
         pessoa.setTelefone("11 99999-8888");
